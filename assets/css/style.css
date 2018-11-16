@@ -1,0 +1,53 @@
+body {
+    background-image: url(../images/background.jpg);
+    background-color: #0b0c10;
+}
+#navbar {
+    padding:0;
+    width: 100%;
+    height: 15%;
+    padding-right: 15px;
+    background-color: #427680;
+    box-shadow: #0b0c10 2px 2px 3px;
+}
+
+#nameHeading {
+    background-color: #41EAD4;
+    color: #0b0c10;
+    margin: 0;
+    padding: 5px;
+    box-shadow: #314d4b 2px 2px 3px;
+}
+
+.jumbotron {
+    color: #0b0c10;
+    background-color: #427680;
+    box-shadow: #0b0c10 6px 6px 8px;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.card {
+    background-color: #427680;
+    padding: 15px;
+    color: #0b0c10;
+    box-shadow: #0b0c10 6px 6px 8px;
+}
+
+.form-control{
+    background-color: #9EBABF;
+    color: #0b0c10;
+}
+
+.btn {
+    background-color: #0b0c10;
+    border-color: #41EAD4;
+    color: #9EBABF;
+}
+
+.carousel-caption {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
