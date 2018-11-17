@@ -1,6 +1,11 @@
 body {
     background-image: url(../images/background.jpg);
     background-color: #0b0c10;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-family: 'Rajdhani', sans-serif;
 }
 #navbar {
     padding:0;
@@ -50,4 +55,8 @@ a {
 
 .carousel-caption {
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.tableHeading {
+    font-weight: bold;
 }

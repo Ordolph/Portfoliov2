@@ -1,26 +1,52 @@
 $(document).ready(function () {
 
-    $("#carouselSlide").click(function () {
+    $("#introP").hide();
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBBf1Zz5aqsPPqqkBZMeYxErpxannJaNzI",
+        authDomain: "portfoliov2-60d0f.firebaseapp.com",
+        databaseURL: "https://portfoliov2-60d0f.firebaseio.com",
+        projectId: "portfoliov2-60d0f",
+        storageBucket: "portfoliov2-60d0f.appspot.com",
+        messagingSenderId: "464857370645"
+    };
+    firebase.initializeApp(config);
 
-        console.log("click")
+    const database = firebase.database();
 
-        switch ($(this).attr("href")) {
+    database.ref().on("child_added", function (snapshot) {
+        let data = snapshot.val()
+        let snapshotName = data.Name;
+        let snapshotMessage = data.Message;
+        let tableRow = $("<tr>");
+        let tableNameDisplay = $("<td>").text(snapshotName);
+        let tableMessageDisplay = $("<td>").text('"' + snapshotMessage + '"').css("font-style", "italic");
 
-            case "Project-One.JPG":
-                window.open(url, 'https://github.com/Ordolph/Project-One');
-                break;
+        tableRow.append(tableNameDisplay, tableMessageDisplay);
+        $("#tableSpace").append(tableRow);
 
-            case "Trivia-Game.JPG":
-                window.open(url, "https://ordolph.github.io/TriviaGame/");
-                break;
-            
-            case "Crystal-Collector.JPG":
-                window.open(url, "https://ordolph.github.io/unit-4-game/");
-                break;
-        }
+    });
 
+
+    $("#guestbookSubmit").click(function (event) {
+        event.preventDefault();
+
+        let name = $("#gBookNameInput")
+        let message = $("#gBookMessageInput")
+
+        database.ref().push({
+            Name: name.val(),
+            Message: message.val(),
+        })
+
+        name.val("");
+        message.val("");
 
     })
 
+    $("#learnMoreBtn").click(function (event){
+        $("#introP").show();
+        $("#learnMoreBtn").hide()
+    })
 
 });

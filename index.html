@@ -7,12 +7,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Austin Randolph's Page</title>
     <!-- Reset File -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
     <!-- Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <!-- Font links -->
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c|Oswald|Rajdhani" rel="stylesheet">
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
 </head>
 
 <body>
@@ -36,8 +40,24 @@
                     <h1 class="display-4">Hello!</h1>
                     <p class="lead">Welcome to my page! Click the button below to learn a little bit about me!</p>
                     <hr class="my-4">
-                    <p class="lead" id="learnMoreParagraph"></p>
-                   <button class="btn btn-info btn-lg" role="button" id="learnMoreBtn">Learn more</button>
+                    <div id="introP">
+                        <img class="profile" width="256px" src="assets\images\profile.jpg" alt="My dog, Harley.">
+                        <p class="lead"> Hi! My name is Austin Randolph.</p>
+                        <p class="follow">I am a former culinary student and prep cook who is
+                            currently studying Full Stack Web Development at the UNH Coding Bootcamp. This is
+                            version 2 of my portfolio.
+                            I hope to modify and adapt this as I learn new techniques, and make it even more
+                            functional. The picture above this paragraph is my dog, Harley. He likes to
+                            bark as loudly as possible while I'm trying to code.</p><br>
+
+                        <p class="follow">Thank you for visiting my site! Please make sure to sign the guest book
+                            at the bottom of
+                            this page, and visit my portfolio by clicking the "Portfolio" button at the top right
+                            of your screen.
+                            Please enjoy your time here, and please direct any complaints to my complaints
+                            department (aka Harley)! </p>
+                    </div>
+                    <button class="btn btn-info btn-lg" role="button" id="learnMoreBtn">Learn more</button>
                 </div>
             </div>
         </div>
@@ -46,21 +66,19 @@
             <div class="row">
                 <div class="col">
                     <div class="text-center">
-                        <div class="card-header h1">
-                            Guestbook
+                        <div class="card-header">
+                            <h1>Guestbook</h1>
                         </div>
                         <div class="card-body">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Message</th>
+                                        <th class="tableHeading" scope="col">Name</th>
+                                        <th class="tableHeading" scope="col">Message</th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr id="tableSpace">
+                                <tbody id="tableSpace">
 
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -78,8 +96,7 @@
                     <form>
                         <div class="form-group">
                             <label for="exampleInputName1">Name</label>
-                            <input type="text" class="form-control" id="inputGuestName"
-                                placeholder="Enter Name" id="gBookNameInput">
+                            <input type="text" class="form-control" placeholder="Enter Name" id="gBookNameInput">
                         </div>
                         <div class="form-group">
                             <label for="Message">Message</label>
