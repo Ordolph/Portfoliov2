@@ -49,4 +49,9 @@ $(document).ready(function () {
         $("#learnMoreBtn").hide()
     })
 
+    $("#contactSubmitBtn").click(function (event){
+        event.preventDefault();
+
+    })
+
 });

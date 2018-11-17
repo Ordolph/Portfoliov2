@@ -7,8 +7,9 @@ body {
 h1 {
     font-family: 'Rajdhani', sans-serif;
 }
+
 #navbar {
-    padding:0;
+    padding: 0;
     width: 100%;
     height: 15%;
     padding-right: 15px;
@@ -41,9 +42,10 @@ a {
     padding: 15px;
     color: #0b0c10;
     box-shadow: #0b0c10 6px 6px 8px;
+    margin-bottom: 25%;
 }
 
-.form-control{
+.form-control {
     background-color: #9EBABF;
     color: #0b0c10;
 }
@@ -62,22 +64,38 @@ a {
     font-weight: bold;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.fab {
+    padding: 5px;
+    font-size: 48px;
+    color: #41EAD4
+}
+
+.footer {
+    background-color: #0b0c10;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+}
+
 @media only screen and (max-width: 876px) {
-    #nameHeading{
+    #nameHeading {
         font-size: 200%;
     }
-
-    .btn{
+    .btn {
         font-size: 75%
     }
 }
 
 @media only screen and (max-width: 650px) {
-    #nameHeading{
+    #nameHeading {
         font-size: 125%;
     }
-
-    .btn{
+    .btn {
         font-size: 15%;
         padding-left: 0;
     }
