@@ -2,6 +2,11 @@ body {
     background-image: url(../images/background.jpg);
     background-color: #0b0c10;
     font-family: 'Oswald', sans-serif;
+    min-height: 100%;
+}
+
+html, body {
+    height: 100%;
 }
 
 h1 {
@@ -80,6 +85,15 @@ a {
     padding: 5px;
     margin: 0;
     width: 100%;
+}
+
+.aholefooter{
+    background-color: #0b0c10;
+    padding: 5px;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 @media only screen and (max-width: 876px) {
