@@ -5,8 +5,8 @@ body {
     /* min-height: 100%; */
 }
 
-html, body {
-    /* height: 100%; */
+html {
+    height: 100%;
 }
 
 h1 {
@@ -87,13 +87,31 @@ a {
     width: 100%;
 }
 
+.push {
+    height: 20%;
+}
 .aholefooter{
     background-color: #0b0c10;
     padding: 5px;
     margin: 0;
     width: 100%;
-    position: absolute;
+    position: relative;
     bottom: 0;
+}
+
+.footwrap {
+    position: relative;
+    height: 100%;
+}
+
+#aboutMe {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-height: 840px ){
+    .footwrap {
+        margin-top: 50%;
+    }
 }
 
 @media only screen and (max-width: 876px) {
@@ -102,6 +120,10 @@ a {
     }
     .btn {
         font-size: 75%
+    }
+
+    .jumbotron {
+        margin-bottom: 0;
     }
 }
 
